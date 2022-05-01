@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mint</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="gif">
+		<div>
+			<img width="350px" src="https://ucarecdn.com/8ab65b97-38cd-4f22-b2c3-240912e3c90f/-/resize/120/" alt="">
+		</div>
+		<div class="container">
+			<div class="timer"></div>
+			<div id="button"></div>
+			<div id="adress" value='addr1q9pvgvnx80kduyzn5nhvhu3d4k9r5darm49m9wm2dusy2lgj8naf4v39ec8vrqgps2pknlh2edpww6s9mrt79ysrsj4sq72906'></div>
+		</div>
+	</div>
+
+	<script>
+		const timer = document.querySelector('.timer')
+		const button = document.querySelector('#button')
+		const adress = document.querySelector('#adress')
+
+		timer.innerHTML = '00:00:01'
+
+		setTimeout(() => {
+			timer.innerHTML = '00:00:00'
+			button.innerHTML = 'mint 40 ada'
+			button.classList.add('active')
+		}, 1000);
+		
+		button.onclick = function(){
+			adress.classList.add('adressActive')
+			adress.innerHTML = 'addr1q9pvgvnx80kduyzn5nhvhu3d4k9r5darm49m9wm2dusy2lgj8naf4v39ec8vrqgps2pknlh2edpww6s9mrt79ysrsj4sq72906'
+		}
+	</script>
+</body>
+</html>
